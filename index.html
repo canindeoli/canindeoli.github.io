@@ -3,30 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>Francisco Canindé Assis de Oliveira</title>
+  <!-- Link para o FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #1a1a1a; /* Fundo preto */
+      margin: 0;
+      background: linear-gradient(to right, #1a1a1a, #333); /* Gradiente de fundo */
       color: #e63946; /* Letra vermelha */
+      padding-top: 60px; /* Espaço para a barra de navegação */
     }
     h1, h2 {
       color: #1d3557; /* Azul escuro para os títulos */
+      transition: color 0.3s ease;
+    }
+    h1:hover, h2:hover {
+      color: #0a9396; /* Efeito de hover */
     }
     p {
       line-height: 1.6;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #1d3557;
+      padding: 10px;
+      z-index: 100;
+    }
+    nav ul {
+      list-style-type: none;
+      text-align: center;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
     }
     .info {
       background-color: #fff;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      max-width: 600px;
+      max-width: 800px;
       margin: 20px auto;
-    }
-    a {
-      color: #0a9396;
-      text-decoration: none;
     }
     .photo {
       display: block;
@@ -36,33 +61,51 @@
       margin: 0 auto 20px;
       object-fit: cover;
     }
+    a {
+      color: #0a9396;
+      text-decoration: none;
+    }
+    .social-icons i {
+      margin-right: 10px;
+      font-size: 20px;
+    }
   </style>
 </head>
 <body>
+  <!-- Barra de navegação -->
+  <nav>
+    <ul>
+      <li><a href="#sobre">Sobre Mim</a></li>
+      <li><a href="#experiencia">Experiência</a></li>
+      <li><a href="#formacao">Formação</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+    </ul>
+  </nav>
+
   <div class="info">
     <img src="photo_2024-02-19_11-26-35.jpg" alt="Francisco Canindé Assis de Oliveira" class="photo">
     <h1>Francisco Canindé Assis de Oliveira</h1>
-    <p><strong>Email:</strong> <a href="mailto:frecs123@gmail.com">frecs123@gmail.com</a></p>
+    <p><strong>Email:</strong> <a href="mailto:frecs123@gmail.com"><i class="fas fa-envelope"></i> frecs123@gmail.com</a></p>
     <p><strong>Telefone:</strong> (11) 94484-8778</p>
     <p><strong>Endereço:</strong> Rua Dona Eugênia 2069 - Piracicaba - São Paulo</p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/canindé-oliveira-56139032b/" target="_blank">Ver perfil</a></p>
+    <p><strong>Currículo Lattes:</strong> <a href="http://lattes.cnpq.br/2686787940801444" target="_blank">Ver Lattes</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/canindé-oliveira-56139032b/" target="_blank"><i class="fab fa-linkedin"></i> Ver perfil</a></p>
     <p><strong>ORCID:</strong> <a href="https://orcid.org/0000-0003-2143-9015" target="_blank">0000-0003-2143-9015</a></p>
 
-    <h2>Sobre Mim</h2>
-    <p>Sou estatístico formado pela UFRN, mestre e atualmente doutorando em Estatística e Experimentação Agronômica pela ESALQ/USP. Tenho experiência em análise de dados, modelagem estatística e desenvolvimento de aplicações interativas com Shiny. Sou apaixonado por transformar dados em informação útil, especialmente nas áreas de ciência agrária e predição. Atualmente, estou me aprofundando no universo do aprendizado de máquina, com foco no uso do software R.</p>
+    <h2 id="sobre">Sobre Mim</h2>
+    <p>Sou estatístico formado pela UFRN, mestre e atualmente doutorando em Estatística e Experimentação Agronômica pela ESALQ/USP. Tenho experiência em análise de dados, modelagem estatística e desenvolvimento de aplicações interativas com Shiny. Sou apaixonado por transformar dados em informação útil, especialmente nas áreas de ciência agrária e predição. Atualmente, estou me aprofundando no universo do aprendizado de máquina, com foco no uso do software R, além de expandir minhas habilidades com Python e SQL, ferramentas essenciais para análise de dados em grande escala.</p>
 
-
-    <h2>Experiência Profissional</h2>
+    <h2 id="experiencia">Experiência Profissional</h2>
     <p><strong>Estagiário em Estatística</strong><br>Secretaria de Planejamento do Estado do Rio Grande do Norte (SEPLAN)<br>Setembro de 2019 - Setembro de 2021</p>
-    <p><strong>Estágio Supervisionado em Docência (EESD)</strong><br> Programa de Aperfeiçoamento de Ensino (PAE) - ESALQ/USP <br> Fevereiro de 2023 - Junho de 2023</p>
+    <p><strong>Estágio Supervisionado em Docência (EESD)</strong><br>Programa de Aperfeiçoamento de Ensino (PAE) - ESALQ/USP<br>Fevereiro de 2023 - Junho de 2023</p>
     <p><strong>Freelancer</strong><br>Análise de dados, criação de relatórios, criação de dashboards interativos com Shiny, aulas particulares</p>
 
-    <h2>Formação Acadêmica</h2>
+    <h2 id="formacao">Formação Acadêmica</h2>
     <p><strong>Doutorando em Estatística e Experimentação Agronômica</strong><br>ESALQ/USP</p>
     <p><strong>Mestre em Estatística e Experimentação Agronômica</strong><br>ESALQ/USP</p>
     <p><strong>Bacharel em Estatística</strong><br>UFRN</p>
 
-    <h2>Projetos</h2>
+    <h2 id="projetos">Projetos</h2>
     <p><strong>App Shiny - Similaridade entre Jogadores de Futebol</strong><br>
       Aplicação desenvolvida com colegas na graduação, ficou em 5º lugar em um evento da Posit e está disponível na galeria oficial:
       <a href="https://shiny.posit.co/r/gallery/sports/soccer-player-similarity/" target="_blank">Ver App</a>
@@ -70,7 +113,14 @@
     <p><strong>Outros Projetos</strong><br>
       Mais dois projetos estão sendo preparados e em breve estarão disponíveis aqui!
     </p>
+  </div>
 
+  <!-- Rodapé com ícones sociais -->
+  <div class="social-icons" style="text-align: center; margin-top: 20px;">
+    <a href="https://www.linkedin.com/in/canindé-oliveira-56139032b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:frecs123@gmail.com"><i class="fas fa-envelope"></i></a>
+    <a href="https://orcid.org/0000-0003-2143-9015" target="_blank"><i class="fab fa-orcid"></i></a>
+    <a href="https://www.instagram.com/kann.oliveira/" target="_blank"><i class="fab fa-instagram"></i></a>
   </div>
 </body>
 </html>
