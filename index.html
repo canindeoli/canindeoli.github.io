@@ -7,11 +7,11 @@
     body {
       font-family: Arial, sans-serif;
       margin: 40px;
-      background-color: #f4f4f4;
-      color: #333;
+      background-color: #1a1a1a; /* Fundo preto */
+      color: #e63946; /* Letra vermelha */
     }
-    h1 {
-      color: #005f73;
+    h1, h2 {
+      color: #1d3557; /* Azul escuro para os títulos */
     }
     p {
       line-height: 1.6;
@@ -22,21 +22,55 @@
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       max-width: 600px;
+      margin: 20px auto;
     }
     a {
       color: #0a9396;
       text-decoration: none;
     }
+    .photo {
+      display: block;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
   <div class="info">
+    <img src="photo_2024-02-19_11-26-35.jpg" alt="Francisco Canindé Assis de Oliveira" class="photo">
     <h1>Francisco Canindé Assis de Oliveira</h1>
     <p><strong>Email:</strong> <a href="mailto:frecs123@gmail.com">frecs123@gmail.com</a></p>
     <p><strong>Telefone:</strong> (11) 94484-8778</p>
     <p><strong>Endereço:</strong> Rua Dona Eugênia 2069 - Piracicaba - São Paulo</p>
     <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/canindé-oliveira-56139032b/" target="_blank">Ver perfil</a></p>
     <p><strong>ORCID:</strong> <a href="https://orcid.org/0000-0003-2143-9015" target="_blank">0000-0003-2143-9015</a></p>
+
+    <h2>Sobre Mim</h2>
+    <p>Sou estatístico formado pela UFRN, mestre e atualmente doutorando em Estatística e Experimentação Agronômica pela ESALQ/USP. Tenho experiência em análise de dados, modelagem estatística e desenvolvimento de aplicações interativas com Shiny. Sou apaixonado por transformar dados em informação útil, especialmente nas áreas de ciência agrária e predição. Atualmente, estou me aprofundando no universo do aprendizado de máquina, com foco no uso do software R.</p>
+
+
+    <h2>Experiência Profissional</h2>
+    <p><strong>Estagiário em Estatística</strong><br>Secretaria de Planejamento do Estado do Rio Grande do Norte (SEPLAN)<br>Setembro de 2019 - Setembro de 2021</p>
+    <p><strong>Estágio Supervisionado em Docência (EESD)</strong><br> Programa de Aperfeiçoamento de Ensino (PAE) - ESALQ/USP <br> Fevereiro de 2023 - Junho de 2023</p>
+    <p><strong>Freelancer</strong><br>Análise de dados, criação de relatórios, criação de dashboards interativos com Shiny, aulas particulares</p>
+
+    <h2>Formação Acadêmica</h2>
+    <p><strong>Doutorando em Estatística e Experimentação Agronômica</strong><br>ESALQ/USP</p>
+    <p><strong>Mestre em Estatística e Experimentação Agronômica</strong><br>ESALQ/USP</p>
+    <p><strong>Bacharel em Estatística</strong><br>UFRN</p>
+
+    <h2>Projetos</h2>
+    <p><strong>App Shiny - Similaridade entre Jogadores de Futebol</strong><br>
+      Aplicação desenvolvida com colegas na graduação, ficou em 5º lugar em um evento da Posit e está disponível na galeria oficial:
+      <a href="https://shiny.posit.co/r/gallery/sports/soccer-player-similarity/" target="_blank">Ver App</a>
+    </p>
+    <p><strong>Outros Projetos</strong><br>
+      Mais dois projetos estão sendo preparados e em breve estarão disponíveis aqui!
+    </p>
+
   </div>
 </body>
 </html>
