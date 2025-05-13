@@ -3,56 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <title>Francisco Canindé Assis de Oliveira</title>
-  <!-- Link para o FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    :root {
+      --bg-color: #1a1a1a;
+      --text-color: #e63946;
+      --title-color: #1d3557;
+      --link-color: #0a9396;
+      --card-bg: #fff;
+    }
+
+    body.light {
+      --bg-color: #f4f4f4;
+      --text-color: #333;
+      --title-color: #005f73;
+      --card-bg: #ffffff;
+    }
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: linear-gradient(to right, #1a1a1a, #333); /* Gradiente de fundo */
-      color: #e63946; /* Letra vermelha */
-      padding-top: 60px; /* Espaço para a barra de navegação */
+      padding: 40px 20px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
     }
-    h1, h2 {
-      color: #1d3557; /* Azul escuro para os títulos */
-      transition: color 0.3s ease;
-    }
-    h1:hover, h2:hover {
-      color: #0a9396; /* Efeito de hover */
-    }
-    p {
-      line-height: 1.6;
-    }
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #1d3557;
-      padding: 10px;
-      z-index: 100;
-    }
-    nav ul {
-      list-style-type: none;
-      text-align: center;
-      padding: 0;
-    }
-    nav ul li {
-      display: inline;
-      margin-right: 20px;
-    }
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-    }
+
     .info {
-      background-color: #fff;
+      background-color: var(--card-bg);
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       max-width: 800px;
-      margin: 20px auto;
+      margin: auto;
     }
+
+    h1, h2 {
+      color: var(--title-color);
+    }
+
+    a {
+      color: var(--link-color);
+      text-decoration: none;
+    }
+
     .photo {
       display: block;
       width: 150px;
@@ -61,51 +56,95 @@
       margin: 0 auto 20px;
       object-fit: cover;
     }
-    a {
-      color: #0a9396;
-      text-decoration: none;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
     }
-    .social-icons i {
-      margin-right: 10px;
-      font-size: 20px;
+
+    ul li::before {
+      content: "\2022";
+      color: var(--title-color);
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+
+    button.theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 8px 12px;
+      background-color: var(--title-color);
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      padding: 10px;
+      background-color: var(--title-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <!-- Barra de navegação -->
-  <nav>
-    <ul>
-      <li><a href="#sobre">Sobre Mim</a></li>
-      <li><a href="#experiencia">Experiência</a></li>
-      <li><a href="#formacao">Formação</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-    </ul>
-  </nav>
+  <button class="theme-toggle" onclick="toggleTheme()">Trocar Tema</button>
 
   <div class="info">
     <img src="photo_2024-02-19_11-26-35.jpg" alt="Francisco Canindé Assis de Oliveira" class="photo">
     <h1>Francisco Canindé Assis de Oliveira</h1>
-    <p><strong>Email:</strong> <a href="mailto:frecs123@gmail.com"><i class="fas fa-envelope"></i> frecs123@gmail.com</a></p>
+    <p><strong>Email:</strong> <a href="mailto:frecs123@gmail.com">frecs123@gmail.com</a></p>
     <p><strong>Telefone:</strong> (11) 94484-8778</p>
     <p><strong>Endereço:</strong> Rua Dona Eugênia 2069 - Piracicaba - São Paulo</p>
     <p><strong>Currículo Lattes:</strong> <a href="http://lattes.cnpq.br/2686787940801444" target="_blank">Ver Lattes</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/canindé-oliveira-56139032b/" target="_blank"><i class="fab fa-linkedin"></i> Ver perfil</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/canindé-oliveira-56139032b/" target="_blank">Ver perfil</a></p>
     <p><strong>ORCID:</strong> <a href="https://orcid.org/0000-0003-2143-9015" target="_blank">0000-0003-2143-9015</a></p>
+    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/kann.oliveira/" target="_blank">@kann.oliveira</a></p>
+    <p><strong>Currículo em PDF:</strong> <a href="https://drive.google.com/drive/folders/1yCGzCpCcZ5ZaR6oIg01hlZXdLZG9aXP2?usp=drive_link" target="_blank">Download</a></p>
 
-    <h2 id="sobre">Sobre Mim</h2>
+    <h2>Sobre Mim</h2>
     <p>Sou estatístico formado pela UFRN, mestre e atualmente doutorando em Estatística e Experimentação Agronômica pela ESALQ/USP. Tenho experiência em análise de dados, modelagem estatística e desenvolvimento de aplicações interativas com Shiny. Sou apaixonado por transformar dados em informação útil, especialmente nas áreas de ciência agrária e predição. Atualmente, estou me aprofundando no universo do aprendizado de máquina, com foco no uso do software R, além de expandir minhas habilidades com Python e SQL, ferramentas essenciais para análise de dados em grande escala.</p>
 
-    <h2 id="experiencia">Experiência Profissional</h2>
+    <h2>Habilidades Técnicas</h2>
+    <ul>
+      <li>R (Avançado)</li>
+      <li>Shiny (Avançado)</li>
+      <li>Python (Intermediário - em aprendizado)</li>
+      <li>SQL (Básico - em aprendizado)</li>
+      <li>Modelagem Estatística</li>
+      <li>Aprendizado de Máquina</li>
+    </ul>
+
+    <h2>Experiência Profissional</h2>
     <p><strong>Estagiário em Estatística</strong><br>Secretaria de Planejamento do Estado do Rio Grande do Norte (SEPLAN)<br>Setembro de 2019 - Setembro de 2021</p>
     <p><strong>Estágio Supervisionado em Docência (EESD)</strong><br>Programa de Aperfeiçoamento de Ensino (PAE) - ESALQ/USP<br>Fevereiro de 2023 - Junho de 2023</p>
-    <p><strong>Freelancer</strong><br>Análise de dados, criação de relatórios, criação de dashboards interativos com Shiny, aulas particulares</p>
+    <p><strong>Freelancer</strong><br>Análise de dados, criação de relatórios, dashboards interativos com Shiny, aulas particulares</p>
 
-    <h2 id="formacao">Formação Acadêmica</h2>
+    <h2>Formação Acadêmica</h2>
     <p><strong>Doutorando em Estatística e Experimentação Agronômica</strong><br>ESALQ/USP</p>
     <p><strong>Mestre em Estatística e Experimentação Agronômica</strong><br>ESALQ/USP</p>
     <p><strong>Bacharel em Estatística</strong><br>UFRN</p>
 
-    <h2 id="projetos">Projetos</h2>
+    <h2>Projetos</h2>
     <p><strong>App Shiny - Similaridade entre Jogadores de Futebol</strong><br>
       Aplicação desenvolvida com colegas na graduação, ficou em 5º lugar em um evento da Posit e está disponível na galeria oficial:
       <a href="https://shiny.posit.co/r/gallery/sports/soccer-player-similarity/" target="_blank">Ver App</a>
@@ -113,14 +152,20 @@
     <p><strong>Outros Projetos</strong><br>
       Mais dois projetos estão sendo preparados e em breve estarão disponíveis aqui!
     </p>
+
+    <h2>Contato</h2>
+    <form action="https://formspree.io/f/seu_id" method="POST">
+      <input type="text" name="name" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu email" required>
+      <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
   </div>
 
-  <!-- Rodapé com ícones sociais -->
-  <div class="social-icons" style="text-align: center; margin-top: 20px;">
-    <a href="https://www.linkedin.com/in/canindé-oliveira-56139032b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="mailto:frecs123@gmail.com"><i class="fas fa-envelope"></i></a>
-    <a href="https://orcid.org/0000-0003-2143-9015" target="_blank"><i class="fab fa-orcid"></i></a>
-    <a href="https://www.instagram.com/kann.oliveira/" target="_blank"><i class="fab fa-instagram"></i></a>
-  </div>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+    }
+  </script>
 </body>
 </html>
